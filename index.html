@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/590d27de59.js" crossorigin="anonymous"></script>
+
 
     <!--CDN do JQUERY-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -25,31 +28,47 @@
 </head>
 
 <body>
+    <div id="child">
+        <div class="child-fechar" onclick="hideChild()"><img src="../assets/images/icone-fermer-et-x-rouge.png"
+                alt="fechar" width="25px"></div>
+        <div class="child-logo"><img class="child-logo--img" src="../assets/images/favicon.png"
+                alt="Logo CritiCine - CC" width="60px" height="60px"></div>
+        <div class="child-class">
+            <div id="child-foto">
 
+            </div>
+            <div id="child-conteudo">
+                <ul id="child-conteudo--ul">
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
     <header class="header">
         <section class="header__flex">
             <section class="flex__1">
                 <div class="header__div_logo">
-                    <a href="../index.html"><img src="../assets/images/logo.png" class="header__div_logo--logo"></a>
+                    <a href="index.html"><img src="../assets/images/logo.png" class="header__div_logo--logo"></a>
                 </div>
-                <!-- MENU SEM BOOSTRAP <nav>
-                        <a href="/index.html" class="header__nav--pages">Home</a>
-                        <a href="./articles.html" class="header__nav--pages">Artigos</a>
-                        <a href="./movies.html" class="header__nav--pages">Movies</a>
-                        <a href="#" class="header__nav--pages"><span class="span--laranja">News</span></a>
-                        <a href="./login.html" class="header__nav--pages">Login</a>
-                    </nav> -->
-                <!--MENU COM BOOSTRAP-->
-                <a href="#"><button type="button" class="btn btn-light btn-custom">Home</button></a>
-                <a href="/pages/articles.html"><button type="button"
-                        class="btn btn-light btn-custom">Artigos</button></a>
-                <a href="/pages/movies.html"><button type="button" class="btn btn-light btn-custom">Movies</button></a>
-                <a href="/pages/news.html"><button type="button" class="btn btn-light btn-custom">News</button></a>
-                <a href="/pages/login.html"><button type="button" class="btn btn-light btn-custom">Login</button></a>
 
+                <a id="header-link-home" href="#"><button type="button"
+                        class="btn btn-light btn-custom">Home</button></a>
+                <button type="button" id="header-botao-abrir" onclick="f_header_abrir()">></button>
+                <a id="header-link-artigos" href="../pages/articles.html"><button type="button"
+                        class="btn btn-light btn-custom">Artigos</button></a>
+                <a id="header-link-movies" href="../pages/movies.html"><button type="button"
+                        class="btn btn-light btn-custom">Movies</button></a>
+                <a id="header-link-news" href="../pages/news.html"><button type="button"
+                        class="btn btn-light btn-custom">News</button></a>
+                <a id="header-link-login" href="../pages/login.html"><button type="button"
+                        class="btn btn-light btn-custom">Login</button></a>
+                <button type="button" id="header-botao-fechar" onclick="f_header_fechar()">
+                </button>
             </section>
             <section class="flex__2">
-                <div class="api-form">
+                <div class="api-form" id="search-box_header">
                     <form class="search-box">
                         <input name="pesquisa" placeholder="Pesquise aqui...">
                         <button>
@@ -76,44 +95,34 @@
         <section class="home-main--esquerda">
             <div class="home-main--esquerda--carousel">
                 <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                    </div>
-                    <div class="carousel-inner index-tamcarousel">
+
+                    <div class="carousel-inner">
+                        <div></div>
                         <div class="carousel-item active">
                             <img src="../assets/images/articles/Killers of the Flower Moon banner.jpg"
-                                class="d-block w-100" alt="killers of the moon banner" height="350px">
+                                class="d-block w-100" alt="killers of the moon banner">
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/images/articles/SocietyoftheSnow_WebBanner.jpg" class="d-block w-100"
-                                alt="society of the snow" height="350px">
+                                alt="society of the snow">
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/images/articles/the nun.jpg" id="nun" class="d-block w-100"
-                                alt="the nun II" height="350px">
+                                alt="the nun II">
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/images/articles/indiana-jones.jpg" id="indiana" class="d-block w-100"
-                                alt="indiana jones banner" height="350px">
+                                alt="indiana jones banner">
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/images/articles/haunted mansion.jpg" id="haunted" class="d-block w-100"
-                                alt="haunted mansion" height="350px">
+                                alt="haunted mansion">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
                         <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">Prev</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="next">
@@ -129,55 +138,55 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="barra_filmes">
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('1')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-1"></div>
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('1')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-1" style="height: 60%;"></div>
 
-                                    <ul class="list-group list-group-flush" id="lista-de-films1">
-
-                                    </ul>
-
-                                </div>
-
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('2')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-2"></div>
-
-                                    <ul class="list-group list-group-flush" id="lista-de-films2">
+                                    <ul class="list-group list-group-flush" id="lista-de-films1" style="height: 40%;">
 
                                     </ul>
 
                                 </div>
 
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('3')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-3"></div>
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('2')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-2" style="height: 60%;"></div>
 
-                                    <ul class="list-group list-group-flush" id="lista-de-films3">
-
-                                    </ul>
-
-                                </div>
-
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('4')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-4"></div>
-
-                                    <ul class="list-group list-group-flush" id="lista-de-films4">
+                                    <ul class="list-group list-group-flush" id="lista-de-films2" style="height: 40%;">
 
                                     </ul>
 
                                 </div>
 
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('5')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-5"></div>
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('3')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-3" style="height: 60%;"></div>
 
-                                    <ul class="list-group list-group-flush" id="lista-de-films5">
+                                    <ul class="list-group list-group-flush" id="lista-de-films3" style="height: 40%;">
 
                                     </ul>
 
                                 </div>
 
-                                <div class="card" style="width: 14.5rem;" onclick="showChild('6')">
-                                    <div class="pag-movies-imagem pag-movies-imagem-6"></div>
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('4')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-4" style="height: 60%;"></div>
 
-                                    <ul class="list-group list-group-flush" id="lista-de-films6">
+                                    <ul class="list-group list-group-flush" id="lista-de-films4" style="height: 40%;">
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('5')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-5" style="height: 60%;"></div>
+
+                                    <ul class="list-group list-group-flush" id="lista-de-films5" style="height: 40%;">
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="card" style="width: 11.5rem; height:450px;" onclick="showChild('6')">
+                                    <div class="pag-movies-imagem pag-movies-imagem-6" style="height: 60%;"></div>
+
+                                    <ul class="list-group list-group-flush" id="lista-de-films6" style="height: 40%;">
 
                                     </ul>
 
@@ -185,73 +194,73 @@
 
                             </div>
                         </div>
-                        <div class="carousel-item">
+                    </div>
+                </div>
             </div>
+
             <div class="home-main--esquerda--criticas">
                 <h2 class="cor-das-criticas">Críticas</h2>
-                <h4>Lorem Ipsum</h4>
+                <h4>Kong: A Ilha da Caveira</h4>
                 <div class="foto_com_img_index">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer magna odio, venenatis ac
-                        facilisis
-                        ac, euismod at magna. Proin felis sem, lacinia id eleifend sit amet, suscipit fringilla tellus.
-                        Morbi posuere orci sed nisi feugiat euismod. Curabitur vitae neque ut arcu laoreet placerat.
-                        Nunc lacinia elementum vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer magna odio, venenatis ac facilisis ac, euismod at magna. Proin felis sem, lacinia id
-                        eleifend sit amet, suscipit fringilla tellus. Morbi posuere orci sed nisi feugiat euismod.
-                        Curabitur vitae neque ut arcu laoreet placerat. Nunc lacinia elementum vehicula. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Integer magna odio, venenatis ac facilisis ac,
-                        euismod at magna. Proin felis sem, lacinia id eleifend sit amet, suscipit fringilla tellus.
-                        Morbi posuere orci sed nisi feugiat euismod. Curabitur vitae neque ut arcu laoreet placerat.
-                        Nunc lacinia elementum vehicula.</p>
-                    <img src="assets/images/kong index.jpg" id="img-das-criticas1" height="350">
+                    <p style="width: 40%;">Um caçador de monstros fracassado convence o governo
+                        dos Estados Unidos a financiar uma viagem a uma ilha inexplorada no Pacífico Sul. Sob o disfarce
+                        de pesquisa geológica, a equipe viaja para a "Ilha da Caveira". Ao chegar, o grupo descobre que
+                        sua missão pode ser complicada pela vida selvagem que habita a ilha. As belas paisagens e
+                        criaturas mortais criam uma experiência visualmente deslumbrante que certamente vai prender sua
+                        atenção.</p>
+                    <img src="../assets/images/kong index.jpg" id="img-das-criticas1"
+                        height="350px" width="55%">
                 </div>
                 <button class="botão-criticas">Ler agora</button>
-                <h4>Lorem Ipsum</h4>
+                <h4>O Hobbit: Uma Jornada Inesperada</h4>
+
                 <div class="foto_com_img_index2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer magna odio, venenatis ac
-                        facilisis
-                        ac, euismod at magna. Proin felis sem, lacinia id eleifend sit amet, suscipit fringilla tellus.
-                        Morbi posuere orci sed nisi feugiat euismod. Curabitur vitae neque ut arcu laoreet placerat.
-                        Nunc lacinia elementum vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer magna odio, venenatis ac facilisis ac, euismod at magna. Proin felis sem, lacinia id
-                        eleifend sit amet, suscipit fringilla tellus. Morbi posuere orci sed nisi feugiat euismod.
-                        Curabitur vitae neque ut arcu laoreet placerat. Nunc lacinia elementum vehicula. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Integer magna odio, venenatis ac facilisis ac,
-                        euismod at magna. Proin felis sem, lacinia id eleifend sit amet, suscipit fringilla tellus.
-                        Morbi posuere orci sed nisi feugiat euismod. Curabitur vitae neque ut arcu laoreet placerat.
-                        Nunc lacinia elementum vehicula.</p>
-                    <img src="assets/images/hobbit index.jpg" id="img-das-criticas2" height="350">
+                    <p style="width: 40%; text-justify: justify;"> Bilbo Bolseiro é arrastado para uma missão para
+                        recuperar o perdido Reino dos Anões de Erebor do temível dragão Smaug. Abordado de repente pelo
+                        mago Gandalf, o Cinzento, Bilbo se vê juntando-se a uma companhia de treze anões liderados pelo
+                        lendário guerreiro, Thorin Escudo de Carvalho. Sua jornada os levará para o Selvagem; por terras
+                        traiçoeiras infestadas de Goblins e Orcs, Wargs mortais e Aranhas Gigantes, Metamorfos e
+                        Feiticeiros. Embora seu objetivo esteja a leste e nas terras áridas da Montanha Solitária,
+                        primeiro eles devem escapar dos túneis dos goblins, onde Bilbo encontra a criatura que mudará
+                        sua vida para sempre... Gollum. Aqui, sozinho com Gollum, às margens de um lago subterrâneo, o
+                        modesto Bilbo Bolseiro não só descobre profundidades de astúcia e coragem que o surpreendem até
+                        mesmo a ele, como também ganha posse do "precioso" anel de Gollum que possui qualidades
+                        inesperadas e úteis... Um simples anel de ouro que está ligado ao destino de toda a Terra-média
+                        de maneiras que Bilbo não pode começar a conhecer.</p>
+                    <img src="../assets/images/hobbit index.jpg" id="img-das-criticas2"
+                        height="350" width="55%">
                 </div>
                 <button class="botão-criticas2">Ler agora</button>
+
             </div>
         </section>
         <section class="home-main--direita">
             <h5>Notícias</h5>
-            <img src="/assets/images/invencivel index.jpeg" id="invencivel">
-            <h5>Lorem Ipsum</h5>
-            <p>Vestibulum semper sem et sem sollicitudin dignissim</p>
-            <img src="/assets/images/liga index.jpeg" id="liga">
-            <h5>Lorem Ipsum</h5>
-            <p>Vestibulum semper sem et sem sollicitudin dignissim</p>
-            <img src="/assets/images/panico index.jpeg" id="panico" width="300px">
-            <h5>Lorem Ipsum</h5>
-            <p>Vestibulum semper sem et sem sollicitudin dignissim</p>
-            <img src="/assets/images/john index.jpeg" id="john">
-            <h5>Lorem Ipsum</h5>
-            <p>Vestibulum semper sem et sem sollicitudin dignissim</p>
-            <img src="/assets/images/vingadores index.jpeg" id="vingadores">
-            <h5>Lorem Ipsum</h5>
-            <p>Vestibulum semper sem et sem sollicitudin dignissim</p>
+            <img src="../assets/images/invencivel index.jpeg" id="invencivel">
+            <h5>Invencível:</h5>
+            <p>Invencível: novos episódios da 2ª temporada ganham data de lançamento</p>
+            <img src="../assets/images/liga index.jpeg" id="liga">
+            <h5>Liga da Justiça:</h5>
+            <p>Blu-Ray de Liga da Justiça de Zack Snyder lidera vendas nos EUA</p>
+            <img src="../assets/images/panico index.jpeg" id="panico" width="300px">
+            <h5>Pânico:</h5>
+            <p>Pânico 7 foi confirmado? Tudo que sabemos sobre a continuação</p>
+            <img src="../assets/images/john index.jpeg" id="john">
+            <h5>John Wick:</h5>
+            <p>John Wick 5 já está sendo escrito, diz chefe da Lionsgate</p>
+            <img src="../assets/images/vingadores index.jpeg" id="vingadores">
+            <h5>Vingadores:</h5>
+            <p>Marvel considera trazer de volta os Vingadores originais em novo filme</p>
     </main>
-    
-    <footer>
+
+    <footer style="margin-top: 100px;">
         <section class="footer__flex">
             <section class="footer__flex--1">Queremos a sua opinão! | Sobre CritiCine | Contato | Termos e
                 condições |
                 Política de privacidade</section>
             <hr>
             <section class="footer__flex--2">
-                <div class="flex--2--1"><img src="/Assets/images/logo.png" class="header__div_logo--logo"></div>
+                <div class="flex--2--1"><img src="../assets/images/logo.png" class="header__div_logo--logo"></div>
                 <div class="flex--2--2">
                     <div>&copy; 2024 - CritiCine</div>
                     <div><a href="#voltar" class="voltar"><span class="span--laranja">Voltar ao topo</span></a>

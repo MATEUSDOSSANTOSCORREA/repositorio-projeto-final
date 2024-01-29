@@ -237,9 +237,10 @@ body {
 
 .home-main--esquerda {
     width: 80%;
-    height: auto;
+    height: 2500px;
     display: flex;
     flex-flow: column nowrap;
+
 }
 
 .home-main--esquerda--carousel {
@@ -248,18 +249,23 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    
+
 }
-.home-main--esquerda--filmes{
-    height: auto;
+
+.home-main--esquerda--filmes {
+    height: 600px;
+    margin: 14vh 0px 0vh;
 }
-.cor-dos-filmes-index{
+
+.cor-dos-filmes-index {
     color: #ff7b00;
 }
-.cor-das-criticas{
+
+.cor-das-criticas {
     color: #ff7b00;
 }
-.botão-criticas{
+
+.botão-criticas {
     height: 40px;
     width: 75px;
     background-color: #ff7b00;
@@ -268,54 +274,75 @@ body {
     margin-left: 40px;
     margin-bottom: 40px;
 }
-.botão-criticas2{
+
+.botão-criticas2 {
     height: 40px;
     width: 75px;
     background-color: #ff7b00;
     color: white;
     border-color: white;
     margin-left: 40px;
-    margin-bottom: 40px;
+
 }
-.home-main--esquerda--criticas{
+
+.home-main--esquerda--criticas {
     height: auto;
+    padding: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+
 }
-.foto_com_img_index{
-display: flex;
-width: 1250px;
-margin: 40px;
-}
-.foto_com_img_index2{
+
+.foto_com_img_index {
     display: flex;
     width: 1250px;
     margin: 40px;
+    justify-content: space-between;
+    
 }
-.img-das-criticas1{
- width: 450px;
- height: 350px;
-}
-.img-das-criticas2{
 
+.foto_com_img_index2 {
+    display: flex;
+    width: 1250px;
+    margin: 40px;
+    justify-content: space-between;
 }
+
+.img-das-criticas1 {
+    width: 450px;
+    height: 350px;
+}
+
+.img-das-criticas2 {}
+
 .home-main--direita {
     width: 20%;
-    padding: 1rem ;
+    padding: 1rem;
 }
+
 
 .carousel__index {
     width: 55vw;
     height: 400px;
 }
-.index-tamcarousel{
+
+.index-tamcarousel {
     width: 800px;
     height: 400px;
 }
+
 .imgs-carousel {
     width: 100%;
     height: 400px;
     border-radius: 20px;
 }
-.d-block {     border: 1px solid transparent;     border-radius: 20px;     max-height: 400px; }
+
+.d-block {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    max-height: 400px;
+}
+
 /* Página movies */
 
 #movies-main {
@@ -1069,11 +1096,12 @@ body.dark {
     transform: translateX(0px);
     transition: transform .2s linear, background-color .2s linear;
 }
+
 .ball:hover {
     background-color: #FF9D29;
 }
 
-.checkbox:checked + .label .ball {
+.checkbox:checked+.label .ball {
     transform: translateX(25px);
 }
 
@@ -1201,7 +1229,7 @@ body.dark {
     align-items: center;
     position: relative;
     top: 28rem;
-    }
+}
 
 .carousel-indicators button {
     padding: .3rem;
@@ -1214,11 +1242,13 @@ body.dark {
     cursor: pointer;
     transition: all .1s ease-in-out;
 }
+
 .carousel-indicators button:hover {
     scale: 1.1;
     transform: rotate(-8deg);
     background-color: orange;
 }
+
 .carousel-indicators button:active {
     scale: 1;
     transform: rotate(0deg);
@@ -1246,6 +1276,7 @@ body.dark {
 .pagination a {
     transition: all .1s ease-in-out;
 }
+
 .pagination li {
     transition: all .1s ease-in-out;
 }
@@ -1264,6 +1295,7 @@ body.dark {
 .pagination a:visited {
     color: black;
 }
+
 .pagination a:hover:not(.active) {
     background-color: #ffae00;
     border-radius: 50px;
@@ -1275,7 +1307,7 @@ body.dark {
 }
 
 #previous {
-    border-radius: 50px;     
+    border-radius: 50px;
 }
 
 #next {
@@ -1588,12 +1620,14 @@ body.dark {
     color: #000000;
     height: 1.5rem;
 }
+
 .articles__menu--artigos h4 {
     font-size: 1.2rem;
     font-weight: bold;
     color: white;
     height: 1.5rem;
 }
+
 .articles__menu--artigos span {
     color: rgb(255, 217, 0);
 }
@@ -1602,6 +1636,7 @@ body.dark {
     color: white;
     font-size: .8rem;
 }
+
 .articles__menu--artigos:hover {
     scale: 1.025;
 }
@@ -1701,6 +1736,7 @@ body.dark {
     transition: all .2s ease;
     opacity: 0;
 }
+
 .card-content--bottom {
     display: flex;
     align-items: center;
@@ -1800,6 +1836,7 @@ body.dark {
     text-align: center;
     transition: all .2s ease;
 }
+
 .card-content--bottom h1 {
     background-color: #ff7b00;
     font-size: 2rem;
@@ -1833,6 +1870,7 @@ body.dark {
 .card-content:hover {
     opacity: 1;
 }
+
 .card-content--bottom:hover {
     opacity: 1;
 }
@@ -1848,6 +1886,7 @@ body.dark {
 .card-content h1:hover {
     color: whitesmoke;
 }
+
 .card-content--bottom h1:hover {
     color: whitesmoke;
 }
@@ -1859,6 +1898,7 @@ body.dark {
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
+
 .card-unity--bottom {
     display: flex;
     flex-direction: column;
@@ -1893,6 +1933,7 @@ body.dark {
     object-fit: cover;
     object-position: center;
 }
+
 .card-unity--bottom img {
     width: 12rem;
     height: 14rem;
@@ -1941,9 +1982,11 @@ body.dark {
     0% {
         scale: 1;
     }
+
     50% {
         scale: 1.050;
     }
+
     100% {
         scale: 1;
     }
@@ -2223,21 +2266,24 @@ footer hr {
     .topicos {
         height: 450px;
     }
+
     #header-botao-abrir {
         display: inline-block;
     }
-    
+
     #header-botao-fechar {
         display: none;
     }
+
     .pag-movies-imagem {
         height: 65%;
         background-color: black;
     }
+
     .list-group {
         max-height: 35%;
     }
-    
+
     /* #header-link-home */
     #header-link-artigos,
     #header-link-movies,
@@ -2245,25 +2291,25 @@ footer hr {
     #header-link-login {
         display: none;
     }
+
     footer hr {
         width: 100%;
     }
-    
+
 }
 
 
 /* Estilos para telas pequenas (smartphones) */
 @media only screen and (max-width: 600px) {
     /* Insira seus estilos aqui */
-  }
-  
-  /* Estilos para telas médias (tablets) */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Estilos para telas médias (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     /* Insira seus estilos aqui */
-  }
-  
-  /* Estilos para telas grandes (desktops) */
-  @media only screen and (min-width: 1025px) {
+}
+
+/* Estilos para telas grandes (desktops) */
+@media only screen and (min-width: 1025px) {
     /* Insira seus estilos aqui */
-  }
-  
+}
